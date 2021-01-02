@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+body{
+    background-color: rgb(225, 225, 225);
+}
+.Container{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.NavBar{
+    padding-top: 10px;
+    font-family: "Bangers";
+    position: relative;
+    margin: 0 auto;
+    max-width: 1300px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.NavBar > * {
+    align-items: center;
+    letter-spacing: 2px;
+    font-size: 25px;
+}
+#BrandLogo {
+    justify-content: center;
+    display: flex;
+    font-size: 40px;
+}
+#Shephard-logo{
+    margin-right: 10px;
+    height: 70px;
+    width: auto;
+}
+#HamMenuDiv{
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+}
+#HamMenuDiv > label{
+    line-height: 70px;
+    font-size: 50px;
+    display: none;
+}
+#toggler{
+    display: none;
+}
+#HamMenu{
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#HamMenu > * {
+    display: inline-block;
+    justify-content: center;
+}
+#Login{
+    padding: 10px 20px 10px 20px;
+    border: solid;
+    border-radius: 25px;
+}
+#Login:hover{
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+@media only screen and (max-width: 500px){
+    #BrandLogo{
+        width: 100%;
+    }
+    #HamMenuDiv {
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+        text-align: center;
+    }
+    #HamMenuDiv > label{
+        display: block;
+        cursor: pointer;
+    }
+    #HamMenu{
+        font-size: 35px;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+    #HamMenu > *{
+        margin-top: 25px;
+    }
+    #toggler:checked + #HamMenu{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+}
